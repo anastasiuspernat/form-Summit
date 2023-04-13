@@ -87,7 +87,7 @@ const FormComponent: React.FC<FormProps> = ({ onSubmit }) => {
         console.log(values);
       }}
     >
-      // Form component, it features error messages that appear under every component if it hasn't been valiedated  
+      {/* Form component, it features error messages that appear under every component if it hasn't been valiedated   */}
       {({  }) => (
         <Form>
           <Field name="firstName" placeholder="First Name*" className="textInput" />
