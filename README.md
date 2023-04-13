@@ -7,8 +7,9 @@ The project incorporates the following features:
 • Integration of TailwindCSS (incorporated into globals.css)
 • PostCSS for .css file transform preprocessing together with TailwindCSS
 • Formik and Yup integration for robust form validation
+• Proper error handling and user-friendly error messages 
 • Unit tests
-• A GitHub workflow designed to work with Unit tests and validate commits
+• A GitHub workflow designed to work with Unit tests and validate commits ((CI/CD) pipeline)
 
 Structure of the project with description of essential files
 <pre>
