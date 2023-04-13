@@ -1,3 +1,5 @@
+# Summit Form
+
 This project features:
 1) React Form built with Next.js
 2) Responsive design (works on mobile)
