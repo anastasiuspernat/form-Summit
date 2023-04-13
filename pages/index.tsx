@@ -31,7 +31,7 @@ export default function Home() {
                 </div>
                 {/* Right column, contains logo */}
                 <div className="right-column">
-                    <img src="https://summit.co/img/spd2022/logo-summit.png" alt="Summit Logo" style={{width: 100}} />
+                    <img src="https://summit.co/img/spd2022/logo-summit.png" alt="Summit Logo" style={{ width: 100 }} />
                 </div>
             </div>
             {/* Form section, contains form and text */}
@@ -50,10 +50,10 @@ export default function Home() {
                     </p>
                     <h3 className="summit-curation">OUR CURATION PROCESS</h3>
                     <p className="summit-note">
-                        Candidates are interviewed to ensure they are: 
-                        <hr/>
-                        A leader in their field 
-                        <hr/>
+                        Candidates are interviewed to ensure they are:
+                        <hr />
+                        A leader in their field
+                        <hr />
                         A warm, kind person who resonates with our principles
                     </p>
                 </div>

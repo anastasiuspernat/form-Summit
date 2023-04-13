@@ -25,7 +25,7 @@ body {
  */
 .topBack {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 80%, rgba(205, 174, 99, 0.0) 80%, rgba(205, 174, 99, 1.00) 100%), url('https://summitco.imgix.net/img/apply/Contact.png?fm=webp');
-    @apply bg-cover bg-bottom py-20;
+    @apply bg-cover bg-bottom py-20 ;
 }
 
 /**
@@ -46,7 +46,8 @@ body {
  We divide content by rows and columns, this is the row
  */
 .row {
-    @apply flex flex-wrap gap-20 px-20;
+    @apply flex flex-wrap gap-5 px-10;
+    
 }
 
 /**
@@ -55,6 +56,16 @@ body {
 .left-column,
 .right-column {
     @apply flex-1;
+}
+
+/**
+ Make columns look nicer on bigger screens
+*/
+.left-column {
+    padding-left: 10%; /* no equivalent in tailwind, so in this quick proto we switch to vanilla css */
+}
+.right-column {
+    padding-right: 10%; /* no equivalent in tailwind, so in this quick proto we switch to vanilla css */
 }
 
 /** 
@@ -68,21 +79,17 @@ body {
     @apply text-red-500;
 }
 
-img {
-    @apply w-full h-auto;
-}
-
 /**
  Form styles
 */
-form {
+.summitForm {
     @apply flex flex-col gap-1 text-white font-medium;
 }
 
 /**
  Select styles
 */
-form select {
+.summitForm select {
     @apply w-full;
 }
 
@@ -90,19 +97,20 @@ form select {
  Text input styles and text area styles
 */
 .textInput,
-form textarea,
-form select {
+.summitForm textarea,
+.summitForm select {
     @apply w-full bg-gray-700 text-white outline-none border-none;
     background-color: #536980;
 }
-form textarea {
+
+.summitForm textarea {
     @apply h-20 py-3 px-2 text-base;
 }
 
 /**
  Button styles
 */
-.button {
+.submitButton {
     @apply bg-red-700 py-3 px-2 font-bold;
 }
 
@@ -110,13 +118,14 @@ form textarea {
  Adds more consistency to text input and select styles
 */
 .textInput,
-form select {
+.summitForm select {
     @apply h-11 py-3 px-2 text-base;
 }
+
 .textInput::placeholder,
-form input::placeholder,
-form textarea::placeholder,
-form textarea {
+.summitForm input::placeholder,
+.summitForm textarea::placeholder,
+.summitForm textarea {
     @apply text-base text-white;
 }
 
@@ -159,7 +168,8 @@ h2 {
         @apply order-first;
     }
 
-    .right-column, .left-column {
+    .right-column,
+    .left-column {
         @apply px-10;
     }
 

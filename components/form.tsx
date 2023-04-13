@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Formik, Field, ErrorMessage, Form } from "formik";
+import { Formik, Field, ErrorMessage, Form, FormikValues } from "formik";
 import * as Yup from "yup";
 
 /**
  * Form validation schema, it's pretty self explanatory
  */
-const SignupSchema = Yup.object().shape({
+const SignupSchema: Yup.ObjectSchema<FormikValues> = Yup.object().shape({
   // First name must be required
   firstName: Yup.string().required("First name is required"),
   // Last name must be required
@@ -35,9 +35,9 @@ const SignupSchema = Yup.object().shape({
 });
 
 /**
- * Options for select field
+ * Options for Interest select field
  */
-const options = [
+const interestOptions: {label: string, value: number}[] = [
   { label: "How did you hear about Summit?* Please Select", value: -1 },
   { label: "Summit Community Member", value: 0 },
   { label: "Friend outside of Summit", value: 1 },
@@ -88,8 +88,8 @@ const FormComponent: React.FC<FormProps> = ({ onSubmit }) => {
       }}
     >
       {/* Form component, it features error messages that appear under every component if it hasn't been valiedated   */}
-      {({  }) => (
-        <Form>
+      {({ }) => (
+        <Form className='summitForm'>
           <Field name="firstName" placeholder="First Name*" className="textInput" />
           <ErrorMessage name="firstName" className='error' component='div' />
           <Field name="lastName" placeholder="Last Name*" className="textInput" />
@@ -107,12 +107,12 @@ const FormComponent: React.FC<FormProps> = ({ onSubmit }) => {
           <label>
             I'm interested in learning about
             <Field as="select" name="interest">
-              {options.map((option, index) => (
+              {interestOptions.map((option, index) => (
                 <option key={option.label} value={option.value}>{option.label}</option>
               ))}
             </Field>
           </label>
-          <ErrorMessage name="interest" className='error'  component='div'/>
+          <ErrorMessage name="interest" className='error' component='div' />
           <label>
             <Field type="checkbox" name="summitJunto" />
             Summit Junto
@@ -124,8 +124,8 @@ const FormComponent: React.FC<FormProps> = ({ onSubmit }) => {
           <label>
             <Field type="checkbox" name="agree" />
             I agree to receive occasional communications from Summit Series. I understand I can withdraw my consent at any time. Please contact <a href='mailto:hello@summit.co'>hello@summit.co</a> for more information.</label>
-          <ErrorMessage name="agree" className='error'  component='div'/>
-          <button type="submit" className='button'>SUBMIT</button>
+          <ErrorMessage name="agree" className='error' component='div' />
+          <button type="submit" className='submitButton'>SUBMIT</button>
         </Form>
       )}
     </Formik>
