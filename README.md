@@ -9,7 +9,7 @@ This project features:
 
 Structure of the project with description of essential files
 <pre>
-.vscode - VS Code stuff including tasks
+.vscode - VS Code workspace config including tasks
 __tests__/Form.test.tsx - Jest unit tests for the form intergrated with Gitghub workflow
 components/Form.tsx - main form component with Formik/Yup validation
 pages/_app.tsx - any page initialization
