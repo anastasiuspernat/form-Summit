@@ -1,14 +1,14 @@
 # Summit Form
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-This project features:
-1) React Form built with Next.js and uses SSR
-2) Responsive design (uses CSS flexbox, works on mobile)
-3) TailwindCSS integration (in globals.css)
-4) PostCSS for .css file transform preprocessing together with TailwindCSS
-5) Formik/Yup integration for form validation
-6) Unit tests
-7) Github workflow for commit validation
+The project incorporates the following features:
+• A React form built with Next.js that leverages Server-Side Rendering (SSR)
+• Responsive design, employing CSS flexbox to ensure mobile functionality
+• Integration of TailwindCSS (incorporated into globals.css)
+• PostCSS for .css file transform preprocessing together with TailwindCSS
+• Formik and Yup integration for robust form validation
+• Unit tests
+• A GitHub workflow designed to work with Unit tests and validate commits
 
 Structure of the project with description of essential files
 <pre>
