@@ -6,14 +6,13 @@ import Form from "../components/form";
  * The styles are in the styles/globals.css
  * @returns Home page
  */
-export default function Home() {
+export default function Home(): React.ReactElement {
 
     /**
      * Handles form submission
      * @param e event received from form submission
      */
     const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
         // console.log(formData);
     };
 

@@ -122,10 +122,10 @@ const FormComponent: React.FC<FormProps> = ({ onSubmit }) => {
             Summit Series Events
           </label>
           <label>
-            <Field type="checkbox" name="agree" />
+            <Field type="checkbox" name="agree" data-testid='agree'/>
             I agree to receive occasional communications from Summit Series. I understand I can withdraw my consent at any time. Please contact <a href='mailto:hello@summit.co'>hello@summit.co</a> for more information.</label>
-          <ErrorMessage name="agree" className='error' component='div' />
-          <button type="submit" className='submitButton'>SUBMIT</button>
+          <ErrorMessage name="agree" className='error' component='div'/>
+          <button type="submit" className='submitButton' data-testid='submitButton'>SUBMIT</button>
         </Form>
       )}
     </Formik>

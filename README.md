@@ -22,6 +22,7 @@ Unit Tests
 __tests__/Form.test.tsx - Jest unit tests for the form intergrated with Gitghub workflow
 .jestrc.js - Jest config to parse tsx with tsconfig
 tsconfig.jest.json - custom Typescript config for Jest tests
+.git/workflows/ci.yml - Github workflow that performs those tests on every commit
 
 Configs
 .vscode - VS Code workspace config including tasks
