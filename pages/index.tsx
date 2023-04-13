@@ -13,55 +13,11 @@ const validatePhone = (phone: string) => {
 };
 
 export default function Home() {
-    const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        mobile: '',
-        email: '',
-        company: '',
-        title: '',
-        personalNote: '',
-        summitJunto: false,
-        summitSeries: false,
-        ulSelection: '',
-        agree: false,
-    });
-    const [errors, setErrors] = useState({
-        firstName: '',
-        lastName: '',
-        mobile: '',
-        email: '',
-        company: '',
-        title: '',
-        personalNote: '',
-        ulSelection: '',
-    });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        const { name, value, type } = e.target;
-        const isCheckbox = type === "checkbox";
-
-        setFormData((prev) => ({
-            ...prev,
-            [name]: isCheckbox ? (e.target as HTMLInputElement).checked : value,
-        }));
-
-        let errorMsg = '';
-        if (name === 'email' && !validateEmail(value)) {
-            errorMsg = 'Invalid email address';
-        } else if (name === 'mobile' && !validatePhone(value)) {
-            errorMsg = 'Invalid phone number';
-        }
-
-        setErrors((prev) => ({
-            ...prev,
-            [name]: errorMsg,
-        }));
-    };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log(formData);
+        // console.log(formData);
     };
 
     return (
