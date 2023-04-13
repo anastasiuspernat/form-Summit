@@ -88,7 +88,7 @@ const FormComponent: React.FC<FormProps> = ({ onSubmit }) => {
       }}
     >
       {/* Form component, it features error messages that appear under every component if it hasn't been valiedated   */}
-      {({ }) => (
+      {({ values, errors, touched, handleChange, handleBlur }) => (
         <Form className='summitForm'>
           <Field name="firstName" placeholder="First Name*" className="textInput" />
           <ErrorMessage name="firstName" className='error' component='div' />

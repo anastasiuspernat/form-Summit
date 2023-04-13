@@ -48,13 +48,13 @@ export default function Home(): React.ReactElement {
                         ski resort in Northern Utah.
                     </p>
                     <h3 className="summit-curation">OUR CURATION PROCESS</h3>
-                    <p className="summit-note">
+                    <div className="summit-note">
                         Candidates are interviewed to ensure they are:
                         <hr />
                         A leader in their field
                         <hr />
                         A warm, kind person who resonates with our principles
-                    </p>
+                    </div>
                 </div>
             </div>
             {/* Quote section, contains quote spanning two columns */}
