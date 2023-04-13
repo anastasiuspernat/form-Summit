@@ -6,16 +6,20 @@ This project features:
 5) Unit tests
 5) Github workflow for commit validation
 
-Structure of the project
-
+Structure of the project with description of essential files
+<pre>
+├── .vscode - VS Code stuff including tasks
 ├── _tests
-│   └── Form.test.tsx
+│   └── Form.test.tsx - Jest unit tests for the form intergrated with Gitghub workflow
 ├── components
-│   ├── Form.tsx
-│   └── Home.tsx
+│   └── Form.tsx - main form with Formik/Yup validation
 ├── pages
-│   ├── _app.tsx
-│   └── index.tsx
+│   ├── _app.tsx - any page initialization
+│   └── index.tsx - index page
 ├── styles
-│   └── globals.css
-└── next.config.js
+│   └── globals.css - CSS classes that use Tailwind CSS
+├── package.json - Node package config
+├── postcss.config.js - Tailwind CSS processing
+├── tailwind.config.js - Tailwind CSS processing
+└── next.config.js - Next.js config
+</pre>
