@@ -40,7 +40,7 @@ npm install
 ```
 Then use
 ```
-npm build
+npm run build
 ```
 To build the project
 
@@ -48,7 +48,7 @@ To build the project
 To start the API server, run the following command:
 
 ```
-npm start
+npm run start
 ```
 This will start the server on port 3000 by default. 
 
@@ -56,6 +56,6 @@ This will start the server on port 3000 by default.
 To run the Jest test suite, run the following command:
 
 ```
-npm test
+npm run test
 ```
 This will run the tests and output the results to the console.
