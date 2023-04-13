@@ -1,0 +1,117 @@
+/* Reset margins and padding */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url();
+}
+
+.topBack {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 80%, rgba(205, 174, 99, 0.0) 80%, rgba(205, 174, 99, 1.00) 100%), url('https://summitco.imgix.net/img/apply/Contact.png?fm=webp');
+    background-size: cover;
+    background-position: bottom;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.formBack {
+    background: linear-gradient(0deg, #000000 0%, #300E0B 55.74%, #CDAE63 100%);
+}
+
+.container {
+    @apply flex flex-col mx-auto;
+}
+
+.row {
+    @apply flex flex-wrap gap-20 px-20;
+}
+
+.left-column,
+.right-column {
+    @apply flex-1;
+}
+
+.quote {
+    @apply flex-1 w-full text-center;
+}
+
+img {
+    @apply w-full h-auto;
+}
+
+form {
+    @apply flex flex-col gap-1 text-white font-medium;
+}
+
+form select {
+    @apply w-full;
+}
+
+.textInput,
+form input[type='text'],
+form input[type='email'],
+form input[type='tel'],
+form textarea,
+form select,
+form button {
+    @apply w-full bg-gray-700 text-white outline-none border-none;
+    background-color: #536980;
+}
+
+form textarea {
+    @apply h-20 py-3 px-2 text-base;
+}
+
+.textInput,
+form input[type='text'],
+form input[type='email'],
+form input[type='tel'],
+form select {
+    @apply h-11 py-3 px-2 text-base;
+}
+
+.textInput::placeholder,
+form input::placeholder,
+form textarea::placeholder,
+form textarea {
+    @apply text-base text-white;
+}
+
+h2 {
+    @apply text-3xl font-bold;
+}
+
+.summit-community {
+    @apply font-serif text-2xl text-white;
+}
+
+.summit-curation {
+    @apply text-lg text-red-500;
+}
+
+.summit-note {
+    @apply text-gray-500;
+}
+
+.bottomBack {
+    @apply bg-black;
+}
+
+@media (max-width: 750px) {
+    .row {
+        @apply flex-col px-0;
+    }
+
+    .right-column {
+        @apply order-last;
+    }
+}
