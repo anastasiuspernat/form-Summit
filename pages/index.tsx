@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Form from "./form";
+import Form from "../components/form";
 
 
 const validateEmail = (email: string) => {

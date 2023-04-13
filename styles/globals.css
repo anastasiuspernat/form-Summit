@@ -41,7 +41,11 @@ body {
 }
 
 .quote {
-    @apply flex-1 w-full text-center;
+    @apply flex-1 w-full text-center text-white px-20 py-20;
+}
+
+.quote a {
+    @apply text-red-500;
 }
 
 img {
@@ -57,14 +61,14 @@ form select {
 }
 
 .textInput,
-form input[type='text'],
-form input[type='email'],
-form input[type='tel'],
 form textarea,
-form select,
-form button {
+form select {
     @apply w-full bg-gray-700 text-white outline-none border-none;
     background-color: #536980;
+}
+
+.button {
+    @apply bg-red-700 py-3 px-2 font-bold;
 }
 
 form textarea {
@@ -72,9 +76,6 @@ form textarea {
 }
 
 .textInput,
-form input[type='text'],
-form input[type='email'],
-form input[type='tel'],
 form select {
     @apply h-11 py-3 px-2 text-base;
 }
@@ -106,12 +107,21 @@ h2 {
     @apply bg-black;
 }
 
+.error {
+    @apply text-white bg-red-700;
+}
+
 @media (max-width: 750px) {
     .row {
         @apply flex-col px-0;
     }
 
     .right-column {
-        @apply order-last;
+        @apply order-first;
     }
+
+    .right-column, .left-column {
+        @apply px-10;
+    }
+
 }
