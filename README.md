@@ -36,6 +36,12 @@ To install the project dependencies, run the following command:
 ```
 npm install
 ```
+Then use
+```
+npm build
+```
+To build the project
+
 # Usage
 To start the API server, run the following command:
 
