@@ -4,42 +4,62 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* Reset margins and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Set default font */
 body {
-    font-family: Arial, sans-serif;
-    background: url();
+    @apply font-sans;
 }
 
+/**
+ * 1. Set the background image
+ * 2. Set the background size
+ * 3. Set the background position
+ * 4. Set the top padding
+ * 5. Set the bottom padding
+ */
 .topBack {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 80%, rgba(205, 174, 99, 0.0) 80%, rgba(205, 174, 99, 1.00) 100%), url('https://summitco.imgix.net/img/apply/Contact.png?fm=webp');
-    background-size: cover;
-    background-position: bottom;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    @apply bg-cover bg-bottom py-20;
 }
 
+/**
+  Background gradient on form
+*/
 .formBack {
     background: linear-gradient(0deg, #000000 0%, #300E0B 55.74%, #CDAE63 100%);
 }
 
+/**
+ Container for all content
+*/
 .container {
     @apply flex flex-col mx-auto;
 }
 
+/**
+ We divide content by rows and columns, this is the row
+ */
 .row {
     @apply flex flex-wrap gap-20 px-20;
 }
 
+/**
+ Left column in the row and right column in the row
+ */
 .left-column,
 .right-column {
     @apply flex-1;
 }
 
+/** 
+ Quoe text 
+*/
 .quote {
     @apply flex-1 w-full text-center text-white px-20 py-20;
 }
@@ -52,29 +72,43 @@ img {
     @apply w-full h-auto;
 }
 
+/**
+ Form styles
+*/
 form {
     @apply flex flex-col gap-1 text-white font-medium;
 }
 
+/**
+ Select styles
+*/
 form select {
     @apply w-full;
 }
 
+/**
+ Text input styles and text area styles
+*/
 .textInput,
 form textarea,
 form select {
     @apply w-full bg-gray-700 text-white outline-none border-none;
     background-color: #536980;
 }
-
-.button {
-    @apply bg-red-700 py-3 px-2 font-bold;
-}
-
 form textarea {
     @apply h-20 py-3 px-2 text-base;
 }
 
+/**
+ Button styles
+*/
+.button {
+    @apply bg-red-700 py-3 px-2 font-bold;
+}
+
+/**
+ Adds more consistency to text input and select styles
+*/
 .textInput,
 form select {
     @apply h-11 py-3 px-2 text-base;

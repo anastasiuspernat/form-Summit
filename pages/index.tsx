@@ -1,28 +1,27 @@
 import { useState } from 'react';
 import Form from "../components/form";
 
-
-const validateEmail = (email: string) => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-};
-
-const validatePhone = (phone: string) => {
-    const re = /^\d{10,15}$/;
-    return re.test(phone);
-};
-
+/**
+ * Home page component
+ * The styles are in the styles/globals.css
+ * @returns Home page
+ */
 export default function Home() {
 
-
+    /**
+     * Handles form submission
+     * @param e event received from form submission
+     */
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         // console.log(formData);
     };
 
     return (
+        // Top section, contains logo and text
         <div className="container">
             <div className="row topBack">
+                {/* Left column, contains intro */}
                 <div className="left-column">
                     <h2 style={{ textAlign: "right", color: "white" }}>
                         BECOME A PART OF OUR COMMUNITY OF 10,000+ LEADING ENTREPRENEURS,
@@ -30,14 +29,18 @@ export default function Home() {
                         SCIENTISTS, AND BEYOND.
                     </h2>
                 </div>
+                {/* Right column, contains logo */}
                 <div className="right-column">
                     <img src="https://summit.co/img/spd2022/logo-summit.png" alt="Summit Logo" style={{width: 100}} />
                 </div>
             </div>
+            {/* Form section, contains form and text */}
             <div className="row formBack">
+                {/* Left column, contains form */}
                 <div className="left-column">
-                    <Form />
+                    <Form onSubmit={handleSubmit} />
                 </div>
+                {/* Right column, contains description */}
                 <div className="right-column">
                     <p className="summit-community">
                         The Summit Series community is a network of 10,000+ global makers.
@@ -55,6 +58,7 @@ export default function Home() {
                     </p>
                 </div>
             </div>
+            {/* Quote section, contains quote spanning two columns */}
             <div className="row bottomBack">
                 <div className="quote">
                     <p>

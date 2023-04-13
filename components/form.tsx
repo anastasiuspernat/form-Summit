@@ -80,7 +80,7 @@ const FormComponent: React.FC<FormProps> = ({ onSubmit }) => {
             I'm interested in learning about
             <Field as="select" name="interest">
               {options.map((option, index) => (
-                <option key={option.label} value={option.value} selected={index == 0}>{option.label}</option>
+                <option key={option.label} value={option.value}>{option.label}</option>
               ))}
             </Field>
           </label>
