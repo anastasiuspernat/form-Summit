@@ -113,7 +113,6 @@ form textarea {
 form select {
     @apply h-11 py-3 px-2 text-base;
 }
-
 .textInput::placeholder,
 form input::placeholder,
 form textarea::placeholder,
@@ -121,6 +120,9 @@ form textarea {
     @apply text-base text-white;
 }
 
+/**
+ Message and intro texts styles
+*/
 h2 {
     @apply text-3xl font-bold;
 }
@@ -145,6 +147,9 @@ h2 {
     @apply text-white bg-red-700;
 }
 
+/**
+ Add responsive styles for mobile and small screens
+*/
 @media (max-width: 750px) {
     .row {
         @apply flex-col px-0;

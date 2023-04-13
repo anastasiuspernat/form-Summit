@@ -23,6 +23,27 @@ Structure of the project with description of essential files
 ├── postcss.config.js - PostCSS CSS files processing for Tailwind
 ├── tailwind.config.js - Tailwind CSS processing configs
 ├── .jestrc.js - Jest config to parse tsx with tsconfig
-├── tsconfig.jest.json - Typescript Jest config to parse tsx with tsconfig
+├── tsconfig.jest.json - custom Typescript config for Jest tests
 └── next.config.js - Next.js config
 </pre>
+
+# Installation
+To install the project dependencies, run the following command:
+```
+npm install
+```
+# Usage
+To start the API server, run the following command:
+
+```
+npm start
+```
+This will start the server on port 3000 by default. 
+
+# Testing
+To run the Jest test suite, run the following command:
+
+```
+npm test
+```
+This will run the tests and output the results to the console.

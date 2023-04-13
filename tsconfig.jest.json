@@ -1,6 +1,11 @@
+/**
+  * This is a Jest-specific config that is used to compile the test files.
+  * It is not used to compile the source files.
+  * The source files are compiled using the tsconfig.json file.
+  */
 {
     "extends": "./tsconfig.json",
     "compilerOptions": {
       "jsx": "react-jsx"
     }
-  }
+}

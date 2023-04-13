@@ -2,25 +2,41 @@ import { useState } from 'react';
 import { Formik, Field, ErrorMessage, Form } from "formik";
 import * as Yup from "yup";
 
+/**
+ * Form validation schema, it's pretty self explanatory
+ */
 const SignupSchema = Yup.object().shape({
+  // First name must be required
   firstName: Yup.string().required("First name is required"),
+  // Last name must be required
   lastName: Yup.string().required("Last name is required"),
+  // Mobile phone must be required and must contain only digits
   mobilePhone: Yup.string()
     .matches(/^[0-9]+$/, "Mobile phone must contain only digits")
     .required("Mobile phone is required"),
+  // Email must be required and must be a valid email
   email: Yup.string().email("Invalid email").required("Email is required"),
+  // Company must be required
   company: Yup.string().required("Company is required"),
+  // Title must be required
   title: Yup.string().required("Title is required"),
+  // Note must be required
   note: Yup.string(),
+  // Interest must be selected
   interest: Yup.string()
     .notOneOf(["-1"], "Please select an interest")
     .required("Please select an interest"),
+  // Checkbox must be true or false
   summitJunto: Yup.bool(),
+  // Checkbox must be true or false
   summitSeriesEvents: Yup.bool(),
+  // Agreement must be acceted (checkbox must be true)
   agree: Yup.bool().oneOf([true], "You must accept the terms"),
 });
 
-
+/**
+ * Options for select field
+ */
 const options = [
   { label: "How did you hear about Summit?* Please Select", value: -1 },
   { label: "Summit Community Member", value: 0 },
@@ -34,13 +50,22 @@ const options = [
   { label: "Other", value: 8 },
 ];
 
+/**
+ * Form props - onSubmit is optional
+ */
 interface FormProps {
   onSubmit?: (values: any) => void;
 }
 
+/**
+ * Main form component
+ * @param props
+ * @returns form component
+ */
 const FormComponent: React.FC<FormProps> = ({ onSubmit }) => {
   return (
     <Formik
+      // Initial values for the form
       initialValues={{
         firstName: "",
         lastName: "",
@@ -54,13 +79,16 @@ const FormComponent: React.FC<FormProps> = ({ onSubmit }) => {
         summitSeriesEvents: false,
         agree: false,
       }}
+      // Validation 
       validationSchema={SignupSchema}
+      // On submit, it logs the values to the console and calls the onSubmit function if it's passed as a prop
       onSubmit={(values) => {
         onSubmit && onSubmit(values);
         console.log(values);
       }}
     >
-      {({ values, errors, touched, handleChange, handleBlur }) => (
+      // Form component, it features error messages that appear under every component if it hasn't been valiedated  
+      {({  }) => (
         <Form>
           <Field name="firstName" placeholder="First Name*" className="textInput" />
           <ErrorMessage name="firstName" className='error' component='div' />
