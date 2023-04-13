@@ -3,7 +3,7 @@
 
 This project features:
 1) React Form built with Next.js and uses SSR
-2) Responsive design (works on mobile)
+2) Responsive design (uses CSS flexbox, works on mobile)
 3) TailwindCSS integration (in globals.css)
 4) PostCSS for .css file transform preprocessing together with TailwindCSS
 5) Formik/Yup integration for form validation
